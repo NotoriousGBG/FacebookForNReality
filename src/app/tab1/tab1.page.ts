@@ -68,15 +68,21 @@ setFilteredItems(searchTerm) {
 
   doRefresh(event) {
     console.log('Begin async operation');
-    this.dataService.newsFeed.unshift({
+
+    this.dataService.newStatus({
       userName: 'Stephanie Wehner',
       imgUrl:   'assets/quantum.jpg',
-      status:   'Casually figuring out quantum computing #womenInIT #womensday'
+      status:   'Casually figuring out quantum computing #womenInIT #womensday',
+      readLater: false
     })
-    this.newsFeed = this.dataService.newsFeed;
+    this.dataService.getNewsFeed();
+    
+
     setTimeout(() => {
       console.log('Async operation has ended');
       event.target.complete();
+      this.newsFeed = this.dataService.newsFeed
+      this.newsFeed.reverse();
     }, 3000);
   }
 

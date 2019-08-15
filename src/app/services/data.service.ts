@@ -46,9 +46,9 @@ async getReadLater() {
     return firebase.firestore().collection('NewsFeed').doc(id).update(update);
   }
 
-  // addTodo(todo: Todo) {
-  //   return this.todosCollection.add(todo);
-  // }
+  newStatus(newStatus) {
+    return firebase.firestore().collection('NewsFeed').add(newStatus);
+  }
 
   filterItems(searchTerm) {
     return this.newsFeed.filter(item => {

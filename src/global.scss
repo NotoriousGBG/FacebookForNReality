@@ -27,7 +27,9 @@
 
 .searchbar-input {
     background: transparent !important;
-    border-radius: 30px !important;
+    border:none !important;
+    box-shadow: none !important;
+    border-bottom: 1px solid white !important;
     padding-bottom: 10px !important;
 }
 
