@@ -1,0 +1,36 @@
+<ion-header >
+  <ion-toolbar color="primary">
+    <ion-icon style="display:inline-block;font-size:48px;" ios="logo-facebook" md="logo-facebook"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <div *ngIf="searching" class="spinner-container">
+        <ion-spinner></ion-spinner>
+    </div>
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+  <ion-list lines="none">
+    <ion-list-header>
+      <ion-label>News Feed</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let feed of marked; let i = index">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>{{feed.userName}} <ion-icon (click)="markAsReadLater(i)" style="float:right;color:black;cursor: pointer;" ios="ios-bookmarks-outline" md="md-bookmarks"></ion-icon></ion-card-title>
+         
+        </ion-card-header>
+        <ion-card-content>
+          {{feed.status}}
+        </ion-card-content>
+        <img *ngIf="feed.imgUrl != NULL" src="{{feed.imgUrl}}" />
+      </ion-card>
+    </ion-item>
+  </ion-list>
+</ion-content>
