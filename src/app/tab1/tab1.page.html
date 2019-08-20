@@ -1,7 +1,7 @@
 <ion-header >
   <ion-toolbar color="primary">
     <ion-icon style="display:inline-block;font-size:48px;" ios="logo-facebook" md="logo-facebook"></ion-icon>
-    <ion-searchbar [formControl]="searchControl" (ionChange)="onSearchInput()" style="background-color: transparent;border-radius: 10px;width: 85%;display:inline-block;padding-bottom: 22px;" showCancelButton="focus"></ion-searchbar>
+    <ion-searchbar [formControl]="searchControl" (ionChange)="onSearchInput()" style="background-color: transparent;border-radius: 10px;width: 100%;display:inline-block;padding-bottom: 22px;" showCancelButton="focus"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
@@ -18,7 +18,7 @@
         </ion-refresher-content>
       </ion-refresher>
     <ion-card [hidden]="visible" id="welcomeCard" class="welcome-card">
-      <img src="/assets/Facebook For.png" alt="" />
+      <img style="width: 100%; height: auto;" src="/assets/FB.png" alt="" />
       <ion-card-header>
         <ion-card-subtitle>Get Started</ion-card-subtitle>
         <ion-card-title>Welcome to Facebook for NReality</ion-card-title>

@@ -1,16 +1,19 @@
 .welcome-card img {
-  max-height: 35vh;
-  overflow: hidden;
+ //max-height: 35vh;
+ width: 100%;
+ height: auto;
+  //overflow: hidden;
 }
 .pink-button{
   color: white;
   float: right !important;
   padding-bottom: 10px !important;
 }
+
 .ion-toolbar{
   --background: #ebb0ba !important;
 }
 
-.pinkHeader{
-  background-color: #ebb0ba !important;
+.ion-button :hover {
+  background-color: aqua;
 }

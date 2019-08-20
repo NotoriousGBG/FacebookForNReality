@@ -27,14 +27,55 @@
 
 .searchbar-input {
     background: transparent !important;
-    border:none !important;
+    //border:none !important;
     box-shadow: none !important;
-    border-bottom: 1px solid white !important;
+    border: 1px solid white !important;
     padding-bottom: 10px !important;
+    border-radius: 50px !important;
+    color:white !important;
 }
+
+.searchbar-input:focus {
+    border:none !important;
+    border-bottom: 1px solid white !important;
+    //box-shadow: none !important;
+    padding-bottom: 10px !important;
+    border-radius: 0px !important;
+    color:white !important;
+}
+
+a, a div, a span, a ion-icon, a ion-label, button, button div, button span, button ion-icon, button ion-label, .ion-tappable, [tappable], [tappable] div, [tappable] span, [tappable] ion-icon, [tappable] ion-label, input, textarea{
+    color:white !important;
+}
+
+.searchbar-cancel-button.sc-ion-searchbar-md, .searchbar-search-icon.sc-ion-searchbar-md {
+    color:white !important;
+}
+
 
 .loading-wrapper.sc-ion-loading-md{
     background: transparent !important;
     box-shadow: none;
     
 }
+ion-card {
+    border-radius: 10px !important;
+    -webkit-box-shadow: 14px 14px 20px -4px rgba(235,176,186,0.69) !important;
+    -moz-box-shadow: 14px 14px 20px -4px rgba(235,176,186,0.69) !important;
+    box-shadow: 14px 14px 20px -4px rgba(235,176,186,0.69) !important;
+
+}
+ion-card:hover{
+    background-color: #ebb0ba !important;
+    color:white;
+}
+ion-card:hover  ion-card-title{
+    color: white !important;
+}
+ion-card:hover  ion-card-title ion-icon{
+    color: white !important;
+}
+// .sc-ion-card-md-h:hover{
+//     background-color: pink !important;
+// }
+
